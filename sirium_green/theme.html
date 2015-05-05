@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+
+	<table border="0" cellspacing="0" cellpadding="0" class="headertbl">
+		<tr>
+			<td id="headerban">
+			
+				<table border="0" cellspacing="0" cellpadding="0" class="bannertbl">
+					<tr>
+						<td id="headerleft">
+							<!-- left header -->
+							<{$xoops_banner}>
+						</td>
+						<td id="headerright">
+							<!-- right header -->
+							<a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>images/logo.gif" width="244" height="62" alt="Logo" /></a>
+						</td>
+					</tr>
+				</table>
+				
+			</td>
+		</tr>
+		<tr>
+			<td style="height: 42px; background-image: url(<{$xoops_imageurl}>images/menubar.gif);">
+				<!-- menu bar -->
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td id="menul">
+							<a href="<{$xoops_url}>">home</a>
+							<a href="<{$xoops_url}>/modules/newbb/">forum</a>
+							<a href="<{$xoops_url}>/modules/mylinks/">links</a>
+							<a href="<{$xoops_url}>/modules/contact/">contact</a>
+						</td>
+						<td id="menur">
+							<!-- search thingy -->
+							<form action="<{$xoops_url}>/search.php" method="get" class="searchfrm">
+							<input type="text" name="query" size="14" class="searchbox" /> <input type="submit" class="srchbtton" value="search" />
+							<input type="hidden" name="action" value="results" />
+							</form>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						</td>
+						<td id="loginbar">
+						<!-- login stuff -->
+							<{if $xoops_isuser}>&nbsp;&nbsp;Hello&nbsp;<a href="<{$xoops_url}>/user.php" class="loginbarlink"><{$xoops_uname}></a> :: <a href="<{$xoops_url}>/user.php?op=logout" class="loginbarlink">logout</a>
+							<{else}>&nbsp; Please <a href="<{$xoops_url}>/user.php" class="loginbarlink">log in</a> or <a href="<{$xoops_url}>/register.php"  class="loginbarlink">Register</a> <{/if}>
+						</td>
+					</tr>
+				</table>
+				<!-- // menu bar -->
+			</td>
+		</tr>
+	</table>
+	
+	<table border="0" cellspacing="0" cellpadding="0" class="middletbl">
+		<tr>
+			<td class="borderl"></td>
+			<td style="height: 8px;"></td>
+			<td class="borderr"></td>
+		</tr>
+		<tr>
+			<td class="borderl"></td>
+			<td>
+			
+				<!-- main content table -->
+				<table border="0" cellspacing="0">
+					<tr>
+						<td id="leftcolumn">
+						<!-- left blocks -->
+						<{foreach item=block from=$xoops_lblocks}>
+							<{include file="sirium_green/theme_blockleft.html"}>
+						<{/foreach}>
+						<!-- // left blocks -->
+						</td>
+						<td id="centercolumn">
+						<!-- centre stuff -->
+
+		<!-- Display center blocks if any -->
+        <{if $xoops_showcblock == 1}>
+
+        <table cellspacing="0">
+          <tr>
+            <td id="centerCcolumn" colspan="2">
+
+            <!-- Start center-center blocks loop -->
+            <{foreach item=block from=$xoops_ccblocks}>
+              <{include file="sirium_green/theme_blockcenter_c.html"}>
+            <{/foreach}>
+            <!-- End center-center blocks loop -->
+
+            </td>
+          </tr>
+          <tr>
+            <td id="centerLcolumn">
+
+            <!-- Start center-left blocks loop -->
+              <{foreach item=block from=$xoops_clblocks}>
+                <{include file="sirium_green/theme_blockcenter_l.html"}>
+              <{/foreach}>
+            <!-- End center-left blocks loop -->
+
+            </td><td id="centerRcolumn">
+
+            <!-- Start center-right blocks loop -->
+              <{foreach item=block from=$xoops_crblocks}>
+                <{include file="sirium_green/theme_blockcenter_r.html"}>
+              <{/foreach}>
+            <!-- End center-right blocks loop -->
+
+            </td>
+          </tr>
+        </table>
+
+        <{/if}>
+        <!-- End display center blocks -->
+
+		<div id="content">
+          <{$xoops_contents}>
+        </div>
+						
+						<!-- //centre stuff -->
+						</td>
+						<{if $xoops_showrblock == 1}>
+						<td id="rightcolumn">
+						<!-- right blocks -->
+						<{foreach item=block from=$xoops_rblocks}>
+							<{include file="sirium_green/theme_blockright.html"}>
+						<{/foreach}>
+						<!-- right blocks -->
+						</td>
+						<{/if}>
+					</tr>
+				</table>
+				<!-- // main content table -->
+			</td>
+			<td class="borderr"></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+					<tr>
+						<td style="width: 15px; height: 15px; background-image: url(<{$xoops_imageurl}>images/bttml.gif);"></td>
+						<td style="width: 739px; background-image: url(<{$xoops_imageurl}>images/bttmc.gif);"></td>
+						<td style="width: 15px; height: 15px; background-image: url(<{$xoops_imageurl}>images/bttmr.gif);"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	
+	<table cellspacing="0">
+		<tr id="footerbar">
+			<td>
+			<{$xoops_footer}> 
+			| 
+			<!-- DO NOT REMOVE OR EDIT THIS FOOTER TEXT -->
+			Design by ITL and <a href="http://support.sirium.net" target="_blank">sirium.net</a>
+			<!-- // notice -->
+			</td>
+		</tr>
+	</table>
+	
+
+
+</body>
+</html>

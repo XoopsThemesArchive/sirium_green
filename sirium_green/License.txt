@@ -1,0 +1,30 @@
+License:
+
+The theme this file accompanies is a collaborative effort between IT Lighthouse 
+and sirium.net.
+
+You can use this theme freely, as long as you adhere to the following 
+conditions:
+
+	1)	You must not use or sell images from this theme elsewhere without 
+		permission.
+	2)	You must not remove any copyright, or any other identifying texts from 
+		the theme.
+	3)	You can convert this theme for other web based applications, but our 
+		copyright notices must remain. We ask that you also include something 
+		like "based on xxx theme".
+	4)	You may not make this theme downloadable from elsewhere without our 
+		permission.
+	5)	You may make minor modifications to this theme to suit your site. Again,
+		copyright notices should remain.
+ 
+If you do not agree to these terms, do not use this theme.
+
+Copyright notices, etc., can be removed by paying a one off license fee. This 
+fee covers one site, and all minor theme updates.
+
+Please see http://support.sirium.net for more information.
+
+IT Lighthouse (ITL) - http://www.it-lighthouse.com
+Sirium.net - http://www.sirium.net
+
